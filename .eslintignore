@@ -1,0 +1,19 @@
+# Build directories
+.next/
+out/
+build/
+
+# Dependencies
+node_modules/
+
+# Environment and config files
+.env*
+.DS_Store
+
+# Package manager files
+package-lock.json
+yarn.lock
+
+# IDE files
+.vscode/
+.idea/ 

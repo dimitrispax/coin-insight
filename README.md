@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## CoinInsight
 
-## Getting Started
+A mini demo cryptocurrency tracking application built with Next.js, TailwindCSS and DaisyUI that provides coin data, market information, and analytics for various cryptocurrencies.
 
-First, run the development server:
+### Getting Started
+
+First, make sure you are at the project's directory and run:
+
+```bash
+npm install
+```
+
+For the second step, add your Coingecko API Key in a `.env` file:
+
+```bash
+COINGECKO_API_KEY=YOUR_API_KEY
+```
+
+Then run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Development Process
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+For the whole project structure I used [Next-js-Boilerplate](https://github.com/ixartz/Next-js-Boilerplate) since it is a well defined best practices boilerplate with > 10k stars on GitHub.
 
-## Learn More
+On my search about the structure of the UI, I stumbled upon [crypto.com/prices](https://crypto.com/prices) which I really liked and tried to follow it.
 
-To learn more about Next.js, take a look at the following resources:
+I wanted something simple yet modern so I chose [Tailwind CSS](https://tailwindcss.com/) because I'm most familiar with it and it has [DaisyUI](https://daisyui.com/) which is lightweight, fast and beautiful.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Even though the API is small and simple enough to be in `/api` and not `/server-actions`, the need for validation is always apparent (even more so since we use JS and not TS) so I used [zod/mini](https://zod.dev/packages/mini) (fast and lightweight) for validations of requests and responses.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The [CoinGecko API](https://coingecko.com/api) has rate limits so I added an error to inform users about this.
 
-## Deploy on Vercel
+### Development Process
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Project Structure**
+I used [Next-js-Boilerplate](https://github.com/ixartz/Next-js-Boilerplate) as the foundation since it's a solid, well maintained starter with 10k+ stars and follows good practices out of the box.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Design**
+The UI design was inspired by [crypto.com/prices](https://crypto.com/prices). I really liked their clean approach, so I tried to capture that same feel.
+
+**Tech Choices**
+
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) + [DaisyUI](https://daisyui.com/) because I'm comfortable with Tailwind and DaisyUI gives you nice components without much setup.
+- **Validation**: Used [zod/mini](https://zod.dev/packages/mini) for request/response validation even though it's a simple API, validation is always worth it (especially in JS).
+- **API**: Went with Next.js API routes instead of server actions since it fits the project size better.
+
+**Rate Limiting**
+The [CoinGecko API](https://coingecko.com/api) has rate limits, so I added error handling to let users know when they hit the limit.
