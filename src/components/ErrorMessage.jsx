@@ -7,12 +7,12 @@ export default function ErrorMessage({ message, onRetry }) {
     <div className="bg-white shadow-sm rounded-lg p-6">
       <div className="text-center">
         <div
-          className={`text-xl font-semibold mb-4 ${isRateLimit ? 'text-orange-600' : 'text-red-600'}`}
+          className={`text-xl font-semibold mb-4 ${isRateLimitError ? 'text-orange-600' : 'text-red-600'}`}
         >
           {isRateLimitError ? 'Rate Limit Exceeded' : 'Error'}
         </div>
         <p className="text-gray-700 text-lg mb-6 leading-relaxed">{message}</p>
-        {isRateLimit && (
+        {isRateLimitError && (
           <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-6">
             <p className="text-orange-700 text-sm">
               💡 <strong>Tip:</strong> This happens when too many requests are
