@@ -26,18 +26,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Development Process
 
-For the whole project structure I used [Next-js-Boilerplate](https://github.com/ixartz/Next-js-Boilerplate) since it is a well defined best practices boilerplate with > 10k stars on GitHub.
-
-On my search about the structure of the UI, I stumbled upon [crypto.com/prices](https://crypto.com/prices) which I really liked and tried to follow it.
-
-I wanted something simple yet modern so I chose [Tailwind CSS](https://tailwindcss.com/) because I'm most familiar with it and it has [DaisyUI](https://daisyui.com/) which is lightweight, fast and beautiful.
-
-Even though the API is small and simple enough to be in `/api` and not `/server-actions`, the need for validation is always apparent (even more so since we use JS and not TS) so I used [zod/mini](https://zod.dev/packages/mini) (fast and lightweight) for validations of requests and responses.
-
-The [CoinGecko API](https://coingecko.com/api) has rate limits so I added an error to inform users about this.
-
-### Development Process
-
 **Project Structure**
 I used [Next-js-Boilerplate](https://github.com/ixartz/Next-js-Boilerplate) as the foundation since it's a solid, well maintained starter with 10k+ stars and follows good practices out of the box.
 
