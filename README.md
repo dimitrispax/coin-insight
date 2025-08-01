@@ -33,6 +33,7 @@ I used [Next-js-Boilerplate](https://github.com/ixartz/Next-js-Boilerplate) as t
 
 
 **Design**
+
 The UI design was inspired by [crypto.com/prices](https://crypto.com/prices). I really liked their clean approach, so I tried to capture that same feel.
 
 
@@ -44,4 +45,5 @@ The UI design was inspired by [crypto.com/prices](https://crypto.com/prices). I 
 
 
 **Rate Limiting**
+
 The [CoinGecko API](https://coingecko.com/api) has rate limits, so I added error handling to let users know when they hit the limit.
